@@ -3,7 +3,7 @@ setInterval(displayClock, 100);
 function displayClock() {
     const time = document.querySelector('#time');
     let date = new Date();
-    let hrs = date.getHours() + 2;
+    let hrs = date.getHours().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
     let min = date.getMinutes();
     if (hrs > 12) {
         hrs = hrs - 12
