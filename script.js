@@ -5,9 +5,7 @@ function displayClock() {
     let date = new Date();
     let hrs = date.getHours() + 2;
     let min = date.getMinutes();
-    if (hrs > 12) {
-        hrs = hrs - 12
-    }
+    hrs = hrs % 12;
     if (hrs < 10) {
         hrs = "0" + hrs
     }
